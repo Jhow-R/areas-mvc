@@ -16,7 +16,9 @@ namespace Areas_MVC
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                // Elimina erro do mesmo nome do controlador dentro da Area e na raiz do projeto
+                namespaces: new[] { "Areas_MVC.Controllers" }
             );
         }
     }
