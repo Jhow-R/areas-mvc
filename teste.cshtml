@@ -1,0 +1,43 @@
+<script>
+        $(function () {
+            for (var i = 0; i < 3; i++) {
+                $('<div>', {
+                    id: 'minhaDiv',
+                    class: 'minhaClasse',
+                    'outro-atributo': 'meuValor'
+                }).appendTo('body');
+            }
+        });
+</script>
+
+
+                        <div class="row">
+                            <div class="col">
+                                <label class="font-weight-bold">Nome do Produto: </label>
+                                <span> @Html.DisplayFor(m => m.NAME)</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label class="font-weight-bold">Preço de Venda: </label>
+                                <span>@String.Format("{0:R$0,00}", Model.SELLING_PRICE)</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label class="font-weight-bold">Nível de Reabastecimento: </label>
+                                <span> @Html.DisplayFor(m => m.REORDER_LEVEL)</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label class="font-weight-bold">Unidade de Venda: </label>
+                                <span> @Html.DisplayFor(m => m.UNIT_OF_SALE)</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label class="font-weight-bold">Quantidade Disponível: </label>
+                                <span> @Html.DisplayFor(m => m.QTY_ON_HAND)</span>
+                            </div>
+                        </div>
